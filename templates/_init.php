@@ -1,3 +1,5 @@
+<h1>HELLO INIT</h1>
+
 <?php
 
 /**
@@ -10,6 +12,9 @@
  * we are using it just to include another file with shared functions.
  *
  */
+
+$title = $page->get("title|title") . " ~~~ " . $page->get("headline|title");
+//echo $title;
 
 include_once("./_func.php"); // include our shared functions
 
