@@ -6,25 +6,22 @@ include('./_head.php'); // include header markup ?>
 	<div class="container">
 		<div class="row centered mt mb">
 			<h1>My Portfolio</h1>
-			
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio01.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio02.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio03.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio04.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio05.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio06.png" class="img-responsive"></a>
-			</div>
+			<?php 
+				$port = $pages->get("/portfolio/")->children->find("limit=6"); 
+				foreach ($port as $key)
+				{
+					//echo $key->title;
+					if($key->images != '')
+					{
+						echo "
+					<div class='col-lg-4 col-md-4 col-sm-4 gallery'>
+					<a href='{$key->url}'>
+					<img src='{$key->images->first()->url}' class='img-responsive'>
+					</a>
+					</div>";
+					}
+				}
+			?>
 		</div><!--/row -->
 	</div><!--/container -->
 
