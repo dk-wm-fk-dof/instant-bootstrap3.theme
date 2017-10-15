@@ -16,5 +16,7 @@
 $title = $page->get("title|title") . " ~~~ " . $page->get("headline|title");
 //echo $title;
 
+$options = $pages->get("/optionsss/");
+
 include_once("./_func.php"); // include our shared functions
 

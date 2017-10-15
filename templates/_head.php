@@ -54,8 +54,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">INSTANT</a>
+					</button>
+					
+					<?php /// <a class="navbar-brand" href="index.html">INSTANT</a> ?>
+					<a class="navbar-brand" href="<?=$config->urls->root?>"> INSTANT <?=$options->text_1?> </a>
+					
 		</div>
 		
 

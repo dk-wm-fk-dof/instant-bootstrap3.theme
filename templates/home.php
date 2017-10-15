@@ -5,7 +5,7 @@ include('./_head.php'); // include header markup ?>
 <section id="works"></section>
 	<div class="container">
 		<div class="row centered mt mb">
-			<h1>My Portfolio</h1>
+			<h1><?php echo $page->text_4; ?></h1>
 			<?php 
 				$port = $pages->get("/portfolio/")->children->find("limit=6"); 
 				foreach ($port as $key)
@@ -16,7 +16,10 @@ include('./_head.php'); // include header markup ?>
 						echo "
 					<div class='col-lg-4 col-md-4 col-sm-4 gallery'>
 					<a href='{$key->url}'>
-					<img src='{$key->images->first()->url}' class='img-responsive'>
+						<h4>$key->title</h4>
+					</a>
+					<a href='{$key->url}'>
+						<img src='{$key->images->first()->url}' class='img-responsive'>
 					</a>
 					</div>";
 					}
