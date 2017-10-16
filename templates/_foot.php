@@ -1,6 +1,8 @@
 <div id="social">
 <div class="container">
 	<div class="row centered">
+
+		<?php /*
 		<div class="col-lg-2">
 			<a href="#"><i class="fa fa-dribbble"></i></a>
 		</div>
@@ -18,28 +20,40 @@
 		</div>
 		<div class="col-lg-2">
 			<a href="#"><i class="fa fa-tumblr"></i></a>
-		</div>
-	
-	</div><! --/row -->
-</div><! --/container -->
-</div><! --/social -->
+		</div> */
+		?>
+
+		<?php foreach ($options->rep_1 as $key){
+		echo 
+		"<div class='col-lg-2'>
+			<a href='{$key->text_url}' target='_blank'><i class='{$key->select_icon->title}'></i></a>
+		</div>";
+		} ?>
+
+	</div><!--/row -->
+</div><!--/container -->
+</div><!--/social -->
+
+
 
 <div id="footerwrap">
 <div class="container">
 	<div class="row centered">
 		<div class="col-lg-4">
-			<p><b>WEB DESIGNER, DEVELOPER & GAME ADDICT</b></p>
+			<?php /// <p><b>WEB DESIGNER, DEVELOPER & GAME ADDICT</b></p> ?>
+			<p><b><?=$options->text_2;?></b></p>
 		</div>
 	
 		<div class="col-lg-4">
-			<p>Living in the amazing London.</p>
+			<p><?=$options->text_3;?></p>
 		</div>
 		<div class="col-lg-4">
-			<p>hello@instant.com</p>
+			<p><?=$options->text_4;?></p>
 		</div>
 	</div>
 </div>
-</div><! --/footerwrap -->
+</div><!--/footerwrap -->
+
 
 
 
