@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="<?php echo $page->summary; ?>" />
 		<meta name="author" content="">
-		<link rel="shortcut icon" href="assets/ico/favicon.ico">
+		<link rel="shortcut icon" href="<?=$options->favicon->url?>">
 
 
 
@@ -58,19 +58,25 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-					</button>
-					
-					<?php /// <a class="navbar-brand" href="index.html">INSTANT</a> ?>
-					<a class="navbar-brand" href="<?=$config->urls->root?>"> INSTANT <?=$options->text_1?> </a>
-					
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<?php /// <a class="navbar-brand" href="index.html">INSTANT</a> ?>
+			<a class="navbar-brand" href="<?=$config->urls->root?>">
+
+				<?php if ($options->logo): ?>
+					<img src="<?=$options->logo->url?>" alt="logo">
+				<?php else: ?>
+					INSTANT <?=$options->text_1?>
+				<?php endif; ?>
+				
+			</a>	
 		</div>
 		
-
         <div class="navbar-collapse collapse">
 		<ul class="nav navbar-nav navbar-right">
 		<?php
