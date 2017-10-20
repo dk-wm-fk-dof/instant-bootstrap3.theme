@@ -32,14 +32,23 @@
 		<![endif]-->
 
 		<style>
+		<?php if ($page->images): ?>
 			#headerwrap {
 				/** background: url(../img/back.jpg) no-repeat center top; */
 				/** <?php echo $page->images->first()->url; ?> **/
 				background: url( <?php echo $page->images->getRandom()->url; ?> ) no-repeat center top;
 				background-size: cover;
 			}
+		<?php endif; ?>
 		</style>
 	</head>
+
+
+
+
+
+
+
 
   <body>
 	<h4>### <?php echo $title; ?></h4>
@@ -92,7 +101,10 @@
         </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </div>
+    </div><!-- Static navbar -->
+
+
+
 
 
 	<div id="headerwrap">

@@ -1,5 +1,4 @@
-<h1>HELLO INIT</h1>
-
+<?php //<h1>HELLO INIT</h1> ?>
 <?php
 
 /**
