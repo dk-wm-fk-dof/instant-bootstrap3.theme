@@ -272,3 +272,15 @@ background: #d2e4ea;
 padding-left: 3px;
 padding-right: 3px;
 }
+
+
+/* BLOG CONTENTS */
+.flex-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.heading {
+	text-align: center;
+	margin-bottom: -7rem;
+}
