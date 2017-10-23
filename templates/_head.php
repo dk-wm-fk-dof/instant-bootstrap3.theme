@@ -38,6 +38,7 @@
 				/** <?php echo $page->images->first()->url; ?> **/
 				background: url( <?php echo $page->images->getRandom()->url; ?> ) no-repeat center top;
 				background-size: cover;
+				background-attachment: fixed;
 			}
 		<?php endif; ?>
 		</style>
